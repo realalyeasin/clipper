@@ -1,3 +1,5 @@
+import 'package:custom_clipper/collection/controller/api_controller.dart';
+import 'package:custom_clipper/collection/views/api_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -9,6 +11,7 @@ import '../controllers/skeleton_controller.dart';
 class HomePage extends StatelessWidget {
   HomePage({Key? key}) : super(key: key);
   SkeletonController skeletonController = Get.put(SkeletonController());
+  ApiController apiControllerController = Get.put(ApiController());
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +45,11 @@ class HomePage extends StatelessWidget {
               ),
             ),
           ),
-          Obx(()=> skeletonController.isLoading.value == true ? const Positioned(child: CustomSkeleton()) : Center(child: Text("Loading Completed"),) )
+          Obx(()=> skeletonController.isLoading.value == true ? const Positioned(child: CustomSkeleton()) : Center(child: Text("Loading Completed"),) ),
+          Obx(() => skeletonController.isLoading.value == false ? MaterialButton(
+            colorBrightness: Brightness.light,
+            onPressed: (){Get.to(()=>ApiView());},
+            child: Text("Collection", style: TextStyle(fontSize: 20, letterSpacing: 1, fontStyle: FontStyle.italic, fontWeight: FontWeight.bold),),) : Container())
         ],
       ),
       floatingActionButton: FloatingActionButton(child: const Icon(Icons.text_increase_rounded), onPressed: (){skeletonController.changeState();},),
