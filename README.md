@@ -1,6 +1,4 @@
 # custom_clipper
 
 A fancy custom flutter navbar
-
-
-![preview](https://user-images.githubusercontent.com/64202952/169264523-89d2efd3-cb82-46e9-b0b8-51c0614d03dd.png)
+![preview](https://user-images.githubusercontent.com/64202952/169268778-e6607b50-9f84-4784-be3f-4f61268ae863.png)
