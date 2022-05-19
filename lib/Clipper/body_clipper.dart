@@ -1,5 +1,5 @@
 import 'dart:ui';
-
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -9,11 +9,11 @@ class Clipper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.yellow.shade300,
+      backgroundColor: Colors.black26,
       appBar: AppBar(
         centerTitle: true,
-        title: Text("Wavy Clipper"),
-        backgroundColor: Colors.lightGreen,
+        title: Text("Fancy Navbar and Button"),
+        backgroundColor: Colors.lightBlueAccent.shade200
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -28,11 +28,11 @@ class Clipper extends StatelessWidget {
                   painter: RPSCustomPainter(),
                 ),
               ),
-              Positioned(child: IconButton(onPressed: (){},icon: Icon(Icons.home_filled,color: Colors.black,size: 38,),), top: 66,left: 16,),
-              Positioned(child: IconButton(onPressed: (){},icon: Icon(Icons.search,color: Colors.black,size: 38,),), top: 67,left: 108,),
+              Positioned(child: IconButton(onPressed: (){},icon: Icon(FontAwesomeIcons.houseChimneyCrack,color: Colors.black,size: 32,),), top: 66,left: 16,),
+              Positioned(child: IconButton(onPressed: (){},icon: Icon(FontAwesomeIcons.searchengin,color: Colors.black,size: 34,),), top: 67,left: 108,),
               Positioned(child: GestureDetector(child: CustomPaint(painter: RPSCustomPainter2(),size: Size(55,55),),onTap: (){},), top: 60,left: 178.1,),
-              Positioned(child: IconButton(onPressed: (){},icon: Icon(Icons.shopping_cart,color: Colors.black,size: 36,),), top: 67,right: 108,),
-              Positioned(child: IconButton(onPressed: (){},icon: Icon(Icons.settings,color: Colors.black,size: 38,),), top: 66,right: 16,)
+              Positioned(child: IconButton(onPressed: (){},icon: Icon(FontAwesomeIcons.cartFlatbed,color: Colors.black,size: 31,),), top: 67,right: 108,),
+              Positioned(child: IconButton(onPressed: (){},icon: Icon(FontAwesomeIcons.tools,color: Colors.black,size: 32,),), top: 66,right: 16,)
 
             ],
           )
